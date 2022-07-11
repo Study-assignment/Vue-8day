@@ -1,16 +1,11 @@
 <template>
-  <div>
-    <div class="main">
-      <!-- 二级路由-挂载点 -->
-      <router-view></router-view>
-    </div>
+  <div style="padding-bottom: 48px">
+    <van-nav-bar :title="$route.meta.title" />
+
+    <router-view></router-view>
     <van-tabbar route>
-      <van-tabbar-item replace to="/layout/home" icon="home-o"
-        >首页</van-tabbar-item
-      >
-      <van-tabbar-item replace to="/layout/search" icon="search"
-        >搜索</van-tabbar-item
-      >
+      <van-tabbar-item icon="home-o" to="/layout/home">标签</van-tabbar-item>
+      <van-tabbar-item icon="search" to="/layout/search">标签</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
@@ -19,10 +14,4 @@
 export default {}
 </script>
 
-<style scoped>
-/* 中间内容区域 - 容器样式(留好上下导航所占位置) */
-.main {
-  padding-top: 46px;
-  padding-bottom: 50px;
-}
-</style>
+<style></style>
